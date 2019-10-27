@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
-<link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+<link href="{{ asset('css/css.css') }}" rel="stylesheet">
 <title>ねこ好きSEのお料理日記</title>
 </head>
 <body>
