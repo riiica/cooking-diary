@@ -52,6 +52,7 @@
       <li style="height: 200px; width:200px;">
         <img src="{{ asset('/img/'. $recipe->recipe_photo ) }}">
         <a href ="/detail/{{ $recipe->recipe_id }}">{{ $recipe->recipe_name }}</a>
+        <p><br></p>
       </li>
     </div>
   <?php }; ?>
