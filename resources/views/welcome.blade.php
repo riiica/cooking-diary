@@ -46,17 +46,54 @@
 <dd>普段の料理記録用サイトを作成してみました！<br>
 今後も更新するので是非献立作成のお役に立てればと思います。</dd>
 </dl>
-<ul>
-  <?php foreach ($recipes as $recipe) { ?>
-    <div class="item_info">
-      <li style="height: 200px; width:200px;">
+<div id="recipes_img" class="carousel slide carousel-fade" data-ride="carousel" style="width:400px" data-interval="3000">
+  <ol class="carousel-indicators">
+    <?php 
+      $imgCount = 0;
+      foreach ($recipes as $recipe) { 
+    ?>
+      @if ($imgCount === 0)
+      <li data-target="#recipes_img" data-slide-to="{{ $imgCount }}" class="active"></li>
+      @else
+      <li data-target="#recipes_img" data-slide-to="{{ $imgCount }}"></li>
+      @endif
+    <?php
+        $imgCount++;
+      };
+    ?>
+  </ol>
+  <div class="carousel-inner">
+    <?php 
+      $imgCount = 0;
+      foreach ($recipes as $recipe) { 
+    ?>
+      @if ($imgCount === 0)
+      <div class="carousel-item active">
+      @else
+      <div class="carousel-item">
+      @endif
         <img src="{{ asset('/img/'. $recipe->recipe_photo ) }}">
-        <a href ="/detail/{{ $recipe->recipe_id }}">{{ $recipe->recipe_name }}</a>
-        <p><br></p>
-      </li>
-    </div>
-  <?php }; ?>
-</ul>
+        <div class="carousel-caption" style="bottom:50px">
+          <h2 style="font-size:150%"><b>{{ $recipe->recipe_name }}</b></h2>
+        </div>
+        <div class="carousel-caption text-right" style="top:-20px;right:40px;">
+          <a href="/detail/{{ $recipe->recipe_id }}" style="color:white;">レシピを見る</h1></a>
+        </div>
+      </div>
+    <?php
+        $imgCount++;
+      };
+    ?>
+    <a class="carousel-control-prev" href="#recipes_img" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#recipes_img" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
 </nav>
 
 </section>
