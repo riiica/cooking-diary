@@ -32,7 +32,7 @@
 <h2>ほうれん草と人参の中華風炒め</h2>
 <h3>材料</h3>
 <table>
-<img src="{{ asset('/img/chinese_style_stir.jpg') }}">
+<img src="{{ asset('/img/'. $recipe->recipe_photo ) }}">
 <th></th>
 <th></th>
 <th></th>
