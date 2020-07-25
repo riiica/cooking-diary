@@ -30,7 +30,7 @@
      <ul>
       <li><a href="">Home</a></li>
       <li><a href="">Main Dish</a></li>
-      <li><a href="">Side Dish</a></li>
+      <li><a href="/side_dish">Side Dish</a></li>
       <li><a href="">Sweets</a></li>
      </ul>
     </nav>
@@ -56,11 +56,10 @@ foreach ($recipes as $recipe) {
 			<div class="item_info">
 				<p class="item-img">
 					
-					<img src="{{ asset('/img/'. $recipe->recipe_photo ) }}" width =250px >
+					<img src="{{ asset('/img/'. $recipe->recipe_photo ) }}">
 					
 				</p>
-				<p class="brand-name">BE RADIANCE</p>
-				<p class="item-name" style="height: 17px;">スクエアリブニット</p>
+				<p class="brand-name"><?= $recipe->recipe_name ?></p>
       </div>
       <?php
 };
