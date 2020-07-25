@@ -5,26 +5,44 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Recipe;
+use App\Models\Ingredient;
+use App\Models\Step;
 
 class CookingController extends Controller
 {
-    public function index() {
-      $recipes = DB::table('recipe')->get();
-      return view('welcome',['recipes' => $recipes]);
-      }
 
-    public function side() {
-        $recipes = DB::table('recipe')->get();
-        return view('side_dish',['recipes' => $recipes]);
-        }
+  protected $recipes;
+  protected $ingredients;
+  protected $steps;
 
-    public function detail(Request $request, $id) {
-        $recipes = DB::table('recipe')->get();
-        //$recipeData = $recipes->whereRaw('`recipe_id` = id')->get();
-        $ingredients = DB::table('ingredient')->get();
-        $steps = DB::table('step')->get();
+  public function __construct(
+    Recipe $recipes,
+    Ingredient $ingredients,
+    Step $steps
+  )
+  {
+    $this->recipes = $recipes;
+    $this->ingredients = $ingredients;
+    $this->steps = $steps;
+  }
 
-        return view('detail',['recipes' => $recipes ,'ingredients' => $ingredients , 'steps' => $steps]);
-      }
-    }
+  public function index() {
+    $recipes = DB::table('recipe')->get();
+    return view('welcome',['recipes' => $recipes]);
+  }
+
+  public function side() {
+    $recipes = DB::table('recipe')->get();
+    return view('side_dish',['recipes' => $recipes]);
+  }
+
+  public function detail(Request $request, $id) {
+    $recipe = $this->recipes->getRecipeById($id);
+    $ingredients =  $this->ingredients->getIngredientByRecipeId($id);
+    $steps = $this->steps->getStepByRecipeId($id);
+
+    return view('detail',['recipe' => $recipe ,'ingredients' => $ingredients , 'steps' => $steps]);
+  }
+}
 
