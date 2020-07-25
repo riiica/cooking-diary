@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'CookingController@index');
+
+Route::get('/side_dish', 'CookingController@side');
+
+Route::get('/detail', 'CookingController@detail');

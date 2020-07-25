@@ -1,75 +1,94 @@
-<?php echo '<?xml version="1.0" encoding="Shift_JIS"?>'; ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
-@if(app('env') == 'production')
-    <link href="{{ secure_asset('css/css.css') }}" rel="stylesheet">
-@else
-    <link href="{{ asset('css/css.css') }}" rel="stylesheet">
-@endif
-<title>ねこ好きSEのお料理日記</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!-- Bootstrap本体 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+<script src="{{ asset('/js/hoge.js') }}"></script>
+<link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
+
 <body>
-<div id="pagebody">
 
-	<!-- ヘッダ -->
-	<div id="header"><h1><a href="index.html"><img src="{{ asset('images/catwalk.png') }}" alt="cat" width=50 height=50/>
-	ねこ好きSEのお料理日記</a></h1></div>
+   <header>
+    <br>
+    <h1 id="logo">お料理日記</h1>
+    <br>
 
-	<!-- メインメニュー -->
-	<ul id="menu">
-		<li id="menu01"><a href="xxx.html">Home</a></li>
-		<li id="menu02"><a href="xxx.html">お料理</a></li>
-		<li id="menu03"><a href="xxx.html">スイーツ</a></li>
-		<li id="menu04"><a href="xxx.html">パン</a></li>
-		<li id="menu05"><a href="xxx.html">写真</a></li>
-	</ul>
+    <img src="{{ asset('/img/header.jpg') }}">
+    <nav id="menubar">
+     <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">Main Dish</a></li>
+      <li><a href="">Side Dish</a></li>
+      <li><a href="">Sweets</a></li>
+     </ul>
+    </nav>
 
-	<!-- サブメニュー（左カラム） -->
-	<div id="submenu">
-		<div id="submenu_header">作成月</div>
-		<ul id="submenu_body">
-			<li><a href="xxx.html">2019年11月</a></li>
-			<li><a href="xxx.html">2019年10月</a></li>
-		</ul>
-	</div>
+   </header>
 
-	<!-- コンテンツ（中央と右の2カラム） -->
-	<div id="content">
-		<!-- ニュース（中央カラム） -->
-		<div id="news">
-			<h2>ニュース</h2>
-			<h3>お料理日記サイトがオープン！！</h3>
-			<p>
-			本サイト管理人のHanaCatです！
-			作った料理の写真やレシピをアップしていきます^^
-			今晩のおかずに困ったら是非参考にしてみてくださいね～
-			</p>
-			<p><img src="{{ asset('images/footStamp.png') }}" alt="cat" width=50 height=50/></p>
-			<hr />
-		</div>
-		<!-- ピックアップ（右カラム） -->
-		<div id="pickup">
-			<h2>シチュエーション別</h2>
-			<ul>
-				<li><a href="xxx.html">お弁当の１品</a></li>
-				<li><a href="xxx.html">普段のメイン料理</a></li>
-				<li><a href="xxx.html">スープ</a></li>
-				<li><a href="xxx.html">記念日料理</a></li>
-				<li><a href="xxx.html">普段のスイーツ</a></li>
-				<li><a href="xxx.html">手渡ししやすいスイーツ</a></li>
-				<li><a href="xxx.html">バレンタイン用スイーツ</a></li>
-			</ul>
-		</div>
-	</div>
 
-	<!-- フッタ -->
-	<div id="footer"><address><img src="{{ asset('images/tereruneko.png') }}" alt="cat" width=30 height=30/>
-	<img src="{{ asset('images/tereruneko.png') }}" alt="cat" width=30 height=30/>
-	<img src="{{ asset('images/tereruneko.png') }}" alt="cat" width=30 height=30/></address></div>
+<div id="contents">
+<section id="new">
+<h2>更新情報・お知らせ</h2>
+<dl>
+<dt>2020/04/29</dt>
+<dd>普段の料理記録用サイトを作成してみました！<br>
+今後も更新するので是非献立作成のお役に立てればと思います。</dd>
+</dl>
+<ul>
 
+<li style="height: 354px;">
+    <a href ="">
+    <?php
+foreach ($recipes as $recipe) {
+?>
+			<div class="item_info">
+				<p class="item-img">
+					
+					<img src="{{ asset('/img/'. $recipe->recipe_photo ) }}" width =250px >
+					
+				</p>
+				<p class="brand-name">BE RADIANCE</p>
+				<p class="item-name" style="height: 17px;">スクエアリブニット</p>
+      </div>
+      <?php
+};
+?>
+
+    </a>
+  
+  </li>
+
+
+</ul>
+</nav>
+
+</section>
+
+<section>
+<h2>お問い合わせ</h2>
+<h3>下記フォームよりご連絡ください。</h3>
+<p><span class="color1">■<strong>サイトに対するご要望や追加でしてほしい機能などございましたら、下記のフォームにご記入ください。</strong></span><br>
+<p>お問い合わせフォームは<a href="https://docs.google.com/forms/d/e/1FAIpQLScogDDMjMy1XF7VsQXYwuc1-bhSrGdiZnwuBJSryz7W9645vQ/viewform?usp=sf_link">こちら</a></p>
+</section>
 </div>
+<!--/contents-->
+<footer>
+<small></small>
+</footer>
+</div>
+<!--/container-->
+
 </body>
 </html>
