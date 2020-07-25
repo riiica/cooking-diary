@@ -16,7 +16,7 @@ body {
 h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form,select,input,textarea {margin: 0px;padding: 0px;font-size: 100%;font-weight: normal;}
 ul {list-style-type: none;}
 ol {padding-left: 40px;padding-bottom: 15px;}
-img {border: none;width: 10%;height: 70%;vertical-align: middle;}
+img {border: none;width: 98%;height: 70%;vertical-align: middle;}
 table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
 iframe {width: 100%;}
 

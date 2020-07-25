@@ -47,8 +47,6 @@
 今後も更新するので是非献立作成のお役に立てればと思います。</dd>
 </dl>
 <ul>
-
-<li style="height: 354px;">
     <a href ="">
     <?php
 foreach ($recipes as $recipe) {
@@ -56,10 +54,12 @@ foreach ($recipes as $recipe) {
 			<div class="item_info">
 				<p class="item-img">
 					
+<li style="height: 200px; width:200px;">
 					<img src="{{ asset('/img/'. $recipe->recipe_photo ) }}">
 					
 				</p>
 				<p class="brand-name"><?= $recipe->recipe_name ?></p>
+</li>
       </div>
       <?php
 };
