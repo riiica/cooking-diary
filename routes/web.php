@@ -15,4 +15,4 @@ Route::get('/', 'CookingController@index');
 
 Route::get('/side_dish', 'CookingController@side');
 
-Route::get('/detail', 'CookingController@detail');
+Route::get('/detail/{id}', 'CookingController@detail');

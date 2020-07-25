@@ -18,8 +18,7 @@ class CookingController extends Controller
         return view('side_dish',['recipes' => $recipes]);
         }
 
-    public function detail(Request $request) {
-        $id = $request->input('id');
+    public function detail(Request $request, $id) {
         $recipes = DB::table('recipe')->get();
         //$recipeData = $recipes->whereRaw('`recipe_id` = id')->get();
         $ingredients = DB::table('ingredient')->get();

@@ -47,29 +47,14 @@
 今後も更新するので是非献立作成のお役に立てればと思います。</dd>
 </dl>
 <ul>
-    <a href ="">
-    <?php
-foreach ($recipes as $recipe) {
-?>
-			<div class="item_info">
-				<p class="item-img">
-					
-<li style="height: 200px; width:200px;">
-					<img src="{{ asset('/img/'. $recipe->recipe_photo ) }}">
-					
-				</p>
-				<p class="brand-name"><?= $recipe->recipe_name ?></p>
-</li>
-      </div>
-      <?php
-};
-?>
-
-    </a>
-  
-  </li>
-
-
+  <?php foreach ($recipes as $recipe) { ?>
+    <div class="item_info">
+      <li style="height: 200px; width:200px;">
+        <img src="{{ asset('/img/'. $recipe->recipe_photo ) }}">
+        <a href ="/detail/{{ $recipe->recipe_id }}">{{ $recipe->recipe_name }}</a>
+      </li>
+    </div>
+  <?php }; ?>
 </ul>
 </nav>
 
