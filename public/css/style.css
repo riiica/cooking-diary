@@ -147,6 +147,10 @@ header {
     height: 50px;
 }
 
+/*.form-control */
+.form-control {
+width:300px;
+}
 
 /*foods_contentsの設定
 ---------------------------------------------------------------------------*/

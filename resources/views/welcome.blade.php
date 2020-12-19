@@ -102,7 +102,7 @@
 <h2>お問い合わせ</h2>
 <h3>下記フォームよりご連絡ください。</h3>
 <p><span class="color1">■<strong>サイトに対するご要望や追加でしてほしい機能などございましたら、下記のフォームにご記入ください。</strong></span><br>
-<p>お問い合わせフォームは<a href="https://docs.google.com/forms/d/e/1FAIpQLScogDDMjMy1XF7VsQXYwuc1-bhSrGdiZnwuBJSryz7W9645vQ/viewform?usp=sf_link">こちら</a></p>
+<p>お問い合わせフォームは<a href="https://docs.google.com/forms/d/e/1FAIpQLSdPP0tnSy3wLgwzkU6_LlgiJbKWhRLfIUBvcCE4rM-231C2XQ/viewform">こちら</a></p>
 </section>
 </div>
 <!--/contents-->
